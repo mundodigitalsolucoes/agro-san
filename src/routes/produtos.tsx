@@ -9,9 +9,16 @@ export const Route = createFileRoute("/produtos")({
   head: () => ({
     meta: [
       { title: "Produtos — Catálogo Agro'San Linea" },
-      { name: "description", content: "Catálogo com mais de 150 produtos para nutrição animal, veterinária, suplementos, equinos, pet e agronegócio. Solicite orçamento pelo WhatsApp." },
+      {
+        name: "description",
+        content:
+          "Catálogo com mais de 150 produtos para nutrição animal, veterinária, suplementos, equinos, pet e agronegócio. Solicite orçamento pelo WhatsApp.",
+      },
       { property: "og:title", content: "Catálogo de produtos — Agro'San Linea" },
-      { property: "og:description", content: "Nutrição animal, veterinária, suplementos, equinos, pet e agronegócio." },
+      {
+        property: "og:description",
+        content: "Nutrição animal, veterinária, suplementos, equinos, pet e agronegócio.",
+      },
       { property: "og:url", content: "/produtos" },
     ],
     links: [{ rel: "canonical", href: "/produtos" }],
@@ -61,7 +68,8 @@ function ProdutosPage() {
             />
           </div>
           <div className="text-sm text-muted-foreground whitespace-nowrap px-2">
-            <span className="font-semibold text-[color:var(--forest-deep)]">{filtered.length}</span> {filtered.length === 1 ? "produto" : "produtos"}
+            <span className="font-semibold text-[color:var(--forest-deep)]">{filtered.length}</span>{" "}
+            {filtered.length === 1 ? "produto" : "produtos"}
           </div>
         </div>
 
@@ -94,10 +102,14 @@ function ProdutosPage() {
             {filtered.map((p) => (
               <article
                 key={p.id}
-                className="group flex flex-col rounded-2xl bg-white border border-[color:var(--border)] overflow-hidden shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all"
+                className="group flex flex-col rounded-3xl bg-white border border-[color:var(--border)] overflow-hidden shadow-soft hover:shadow-elegant hover:-translate-y-1 hover:border-[color:var(--leaf)]/40 transition-all duration-300"
               >
-                <div className="aspect-[4/3] bg-gradient-to-br from-[color:var(--accent)] to-[color:var(--cream)] grid place-items-center relative overflow-hidden">
-                  <div className="text-7xl transform group-hover:scale-110 transition-transform duration-500" aria-hidden>
+                <div className="aspect-[4/3] bg-gradient-to-br from-[color:var(--accent)] via-white to-[color:var(--cream)] grid place-items-center relative overflow-hidden">
+                  <div className="absolute inset-8 rounded-full bg-[color:var(--leaf)]/10 blur-2xl group-hover:bg-[color:var(--gold)]/15 transition-colors" />
+                  <div
+                    className="relative text-7xl transform group-hover:scale-110 transition-transform duration-500"
+                    aria-hidden
+                  >
                     {p.emoji}
                   </div>
                   <div className="absolute top-3 left-3 text-[10px] uppercase tracking-wider font-semibold text-[color:var(--forest-deep)] bg-white/90 backdrop-blur px-2.5 py-1 rounded-full">
@@ -105,13 +117,17 @@ function ProdutosPage() {
                   </div>
                 </div>
                 <div className="p-5 flex-1 flex flex-col">
-                  <h3 className="font-display font-bold text-[color:var(--forest-deep)] leading-tight">{p.name}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">{p.description}</p>
+                  <h3 className="font-display font-bold text-[color:var(--forest-deep)] leading-tight">
+                    {p.name}
+                  </h3>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">
+                    {p.description}
+                  </p>
                   <a
                     href={productQuoteUrl(p.name)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-forest text-white px-4 py-2.5 text-sm font-semibold shadow-soft hover:shadow-elegant transition-all"
+                    className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-forest text-white px-4 py-2.5 text-sm font-semibold shadow-soft hover:shadow-elegant hover:brightness-105 transition-all"
                   >
                     Solicitar orçamento
                     <ArrowRight className="w-3.5 h-3.5" />

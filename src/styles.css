@@ -167,3 +167,19 @@
 @utility animate-float {
   animation: float 6s ease-in-out infinite;
 }
+
+@keyframes map-pulse {
+  0%, 100% { opacity: 0.92; }
+  50% { opacity: 1; }
+}
+@keyframes map-ring {
+  0% { transform: scale(0.96); opacity: 0.45; transform-origin: 132px 149px; }
+  70% { transform: scale(1.14); opacity: 0.08; transform-origin: 132px 149px; }
+  100% { transform: scale(0.96); opacity: 0.35; transform-origin: 132px 149px; }
+}
+@utility animate-map-pulse {
+  animation: map-pulse 3.6s ease-in-out infinite;
+}
+@utility animate-map-ring {
+  animation: map-ring 3.8s ease-in-out infinite;
+}

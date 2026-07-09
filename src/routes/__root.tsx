@@ -51,12 +51,17 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <p className="mt-2 text-sm text-muted-foreground">Tente novamente ou volte para a home.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="rounded-full bg-gradient-forest px-5 py-2.5 text-sm font-semibold text-white"
           >
             Tentar novamente
           </button>
-          <a href="/" className="rounded-full border border-input px-5 py-2.5 text-sm font-medium">Home</a>
+          <a href="/" className="rounded-full border border-input px-5 py-2.5 text-sm font-medium">
+            Home
+          </a>
         </div>
       </div>
     </div>
@@ -69,17 +74,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Agro'San Linea — Tecnologia e Soluções para o Agronegócio" },
-      { name: "description", content: "Desde 2012, a Agro'San Linea oferece produtos, tecnologia e atendimento especializado para fortalecer o produtor rural. Nutrição animal, veterinária, suplementos e agronegócio." },
+      {
+        name: "description",
+        content:
+          "Desde 2012, a Agro'San Linea oferece produtos, tecnologia e atendimento especializado para fortalecer o produtor rural. Nutrição animal, veterinária, suplementos e agronegócio.",
+      },
       { name: "author", content: "Agro'San Linea" },
       { name: "theme-color", content: "#1f3a2e" },
+      { name: "robots", content: "index, follow" },
       { name: "google", content: "notranslate" },
-      { httpEquiv: "Content-Language", content: "pt-BR" } as any,
+      { "http-equiv": "Content-Language", content: "pt-BR" },
       { property: "og:site_name", content: "Agro'San Linea" },
-      { property: "og:title", content: "Agro'San Linea — Tecnologia e Soluções para o Agronegócio" },
-      { property: "og:description", content: "Produtos, tecnologia, informação e atendimento especializado para o produtor rural desde 2012." },
+      {
+        property: "og:title",
+        content: "Agro'San Linea — Tecnologia e Soluções para o Agronegócio",
+      },
+      {
+        property: "og:description",
+        content:
+          "Produtos, tecnologia, informação e atendimento especializado para o produtor rural desde 2012.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:image", content: "/images/logo-agrosan.png" },
+      { property: "og:image:alt", content: "Logo oficial Agro'San Linea" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "/images/logo-agrosan.png" },
     ],
@@ -87,9 +105,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/images/logo-agrosan.png", type: "image/png" },
       { rel: "apple-touch-icon", href: "/images/logo-agrosan.png" },
+      { rel: "canonical", href: "/" },
+      { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap",
+      },
     ],
     scripts: [
       {
@@ -100,9 +123,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           name: "Agro'San Linea",
           slogan: "Se tem Agro'San, tem mais negócio.",
           foundingDate: "2012",
+          url: "https://agrosanlinea.com.br",
+          sameAs: ["https://instagram.com/agrosanlinea"],
           areaServed: "BR",
           address: { "@type": "PostalAddress", addressRegion: "PA", addressCountry: "BR" },
           logo: "/images/logo-agrosan.png",
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+55 91 8463-3934",
+            contactType: "customer service",
+            areaServed: "BR",
+            availableLanguage: "Portuguese",
+          },
         }),
       },
     ],

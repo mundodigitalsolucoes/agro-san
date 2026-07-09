@@ -28,8 +28,12 @@ export function Header() {
             loading="eager"
           />
           <div className="hidden sm:block leading-tight">
-            <div className="font-display font-bold text-[color:var(--forest-deep)] text-base tracking-tight">{COMPANY.shortName}</div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-[color:var(--muted-foreground)]">linea · desde {COMPANY.since}</div>
+            <div className="font-display font-bold text-[color:var(--forest-deep)] text-base tracking-tight">
+              {COMPANY.shortName}
+            </div>
+            <div className="text-[10px] uppercase tracking-[0.2em] text-[color:var(--muted-foreground)]">
+              linea · desde {COMPANY.since}
+            </div>
           </div>
         </Link>
 
@@ -39,7 +43,9 @@ export function Header() {
               key={item.to}
               to={item.to}
               className="px-4 py-2 rounded-lg text-sm font-medium text-[color:var(--foreground)]/80 hover:text-[color:var(--forest-deep)] hover:bg-[color:var(--accent)]/60 transition-colors"
-              activeProps={{ className: "text-[color:var(--forest-deep)] bg-[color:var(--accent)]/70" }}
+              activeProps={{
+                className: "text-[color:var(--forest-deep)] bg-[color:var(--accent)]/70",
+              }}
               activeOptions={{ exact: item.to === "/" }}
             >
               {item.label}
@@ -78,7 +84,9 @@ export function Header() {
                 to={item.to}
                 onClick={() => setOpen(false)}
                 className="px-3 py-3 rounded-lg text-base font-medium text-[color:var(--foreground)] hover:bg-[color:var(--accent)]"
-                activeProps={{ className: "bg-[color:var(--accent)] text-[color:var(--forest-deep)]" }}
+                activeProps={{
+                  className: "bg-[color:var(--accent)] text-[color:var(--forest-deep)]",
+                }}
                 activeOptions={{ exact: item.to === "/" }}
               >
                 {item.label}
@@ -102,7 +110,7 @@ export function Header() {
 function WhatsIcon() {
   return (
     <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor" aria-hidden>
-      <path d="M20.5 3.5A11 11 0 0 0 3.4 17L2 22l5.2-1.4a11 11 0 0 0 16.3-9.6 10.9 10.9 0 0 0-3-7.5ZM12 20.2a9 9 0 0 1-4.6-1.3l-.3-.2-3.1.8.8-3-.2-.3A9.2 9.2 0 1 1 12 20.2Zm5.1-6.8c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1a7.4 7.4 0 0 1-3.6-3.1c-.3-.5.3-.4.8-1.4.1-.2 0-.4 0-.5l-.9-2c-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/>
+      <path d="M20.5 3.5A11 11 0 0 0 3.4 17L2 22l5.2-1.4a11 11 0 0 0 16.3-9.6 10.9 10.9 0 0 0-3-7.5ZM12 20.2a9 9 0 0 1-4.6-1.3l-.3-.2-3.1.8.8-3-.2-.3A9.2 9.2 0 1 1 12 20.2Zm5.1-6.8c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1a7.4 7.4 0 0 1-3.6-3.1c-.3-.5.3-.4.8-1.4.1-.2 0-.4 0-.5l-.9-2c-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z" />
     </svg>
   );
 }
