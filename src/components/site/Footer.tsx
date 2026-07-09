@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { COMPANY, whatsappUrl } from "@/lib/company";
 import { MapPin, Mail, Instagram } from "lucide-react";
+import agrosanLogo from "@/assets/logo-agrosan.png.asset.json";
 
 export function Footer() {
   return (
@@ -8,20 +9,15 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3 mb-5">
-            <div className="w-11 h-11 rounded-xl bg-white/10 grid place-items-center border border-white/15">
-              <svg viewBox="0 0 24 24" className="w-6 h-6 text-[color:var(--gold-soft)]" fill="currentColor" aria-hidden>
-                <path d="M12 2C7 6 5 10 5 14a7 7 0 0 0 14 0c0-4-2-8-7-12Z"/>
-              </svg>
-            </div>
-            <div className="leading-tight">
-              <div className="font-display font-bold text-white text-lg">Agro'San Linea</div>
-              <div className="text-[10px] uppercase tracking-[0.2em] text-white/60">Desde {COMPANY.since}</div>
+            <div className="rounded-2xl bg-white p-3 border border-white/15 shadow-soft">
+              <img src={agrosanLogo.url} alt="Logo Agro'San Linea" className="h-12 w-auto max-w-[150px] object-contain" loading="lazy" />
             </div>
           </div>
           <p className="text-sm text-white/70 max-w-xs">
             Tecnologia, produtos e soluções para fortalecer o produtor rural em todo o Brasil.
           </p>
-          <p className="mt-4 text-xs text-white/50">CNPJ {COMPANY.cnpj}</p>
+          <p className="mt-4 text-xs text-white/60">CNPJ {COMPANY.cnpj}</p>
+          <p className="mt-1 text-xs text-white/60">Desde {COMPANY.since}</p>
         </div>
 
         <div>
@@ -81,6 +77,12 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/50">
           <p>© {new Date().getFullYear()} Agro'San Linea. Todos os direitos reservados.</p>
+          <p className="text-center">
+            Desenvolvido por{" "}
+            <a href={COMPANY.developerUrl} target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-[color:var(--gold-soft)] font-semibold">
+              {COMPANY.developerName}
+            </a>
+          </p>
           <p className="italic">"{COMPANY.slogan}"</p>
         </div>
       </div>
