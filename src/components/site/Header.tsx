@@ -2,7 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { COMPANY, whatsappUrl } from "@/lib/company";
-import agrosanLogo from "@/assets/logo-agrosan.png.asset.json";
+
+const AGROSAN_LOGO = "/images/logo-agrosan.png";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -21,9 +22,9 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-18 py-3">
         <Link to="/" className="flex items-center gap-3 group" aria-label="Agro'San Linea — início">
           <img
-            src={agrosanLogo.url}
+            src={AGROSAN_LOGO}
             alt="Logo Agro'San Linea"
-            className="h-12 w-auto max-w-[160px] object-contain transition-transform group-hover:scale-105"
+            className="h-12 w-auto max-w-[170px] object-contain transition-transform group-hover:scale-105"
             loading="eager"
           />
           <div className="hidden sm:block leading-tight">
