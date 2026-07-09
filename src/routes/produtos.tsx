@@ -19,9 +19,15 @@ export const Route = createFileRoute("/produtos")({
   component: ProdutosPage,
 });
 
+function getInitialCategory(): ProductCategory | "Todos" {
+  if (typeof window === "undefined") return "Todos";
+  const value = new URLSearchParams(window.location.search).get("categoria");
+  return CATEGORIES.includes(value as ProductCategory) ? (value as ProductCategory) : "Todos";
+}
+
 function ProdutosPage() {
   const [query, setQuery] = useState("");
-  const [cat, setCat] = useState<ProductCategory | "Todos">("Todos");
+  const [cat, setCat] = useState<ProductCategory | "Todos">(getInitialCategory);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -65,7 +71,7 @@ function ProdutosPage() {
             <button
               key={c}
               type="button"
-              onClick={() => setCat(c as any)}
+              onClick={() => setCat(c as ProductCategory | "Todos")}
               className={`px-4 py-2 rounded-full text-sm font-medium border transition-all ${
                 cat === c
                   ? "bg-gradient-forest text-white border-transparent shadow-soft"
