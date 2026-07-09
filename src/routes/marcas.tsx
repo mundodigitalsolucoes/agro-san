@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import { PageHero } from "./empresa";
 import agrosanLogo from "@/assets/logo-agrosan.png.asset.json";
 import nutrisanLogo from "@/assets/logo-nutrisan.png.asset.json";
@@ -26,6 +27,8 @@ const MARCAS = [
     logo: agrosanLogo.url,
     tint: "from-[color:var(--forest-deep)] to-[color:var(--forest)]",
     bullets: ["Curadoria de portfólio", "Atendimento consultivo", "Presença em todo o Pará"],
+    cta: "Conhecer história",
+    href: "/nossa-historia",
   },
   {
     name: "SHOP'SAN",
@@ -33,6 +36,8 @@ const MARCAS = [
     desc: "Central prática de compra, cotação e relacionamento — tecnologia e simplicidade em um só lugar.",
     tint: "from-[color:var(--gold)] to-[color:var(--gold-soft)]",
     bullets: ["Cotação rápida", "Atendimento humanizado", "Canal digital integrado"],
+    cta: "Ver produtos",
+    href: "/produtos",
   },
   {
     name: "NUTRI'SAN",
@@ -41,6 +46,8 @@ const MARCAS = [
     logo: nutrisanLogo.url,
     tint: "from-[color:oklch(0.62_0.10_195)] to-[color:oklch(0.78_0.10_190)]",
     bullets: ["Alta conversão alimentar", "Formulações premium", "Suporte técnico incluso"],
+    cta: "Linha Nutri'San",
+    href: "/produtos?categoria=Nutri%C3%A7%C3%A3o%20Animal",
   },
   {
     name: "PET'SAN",
@@ -49,6 +56,8 @@ const MARCAS = [
     logo: petsanLogo.url,
     tint: "from-[color:oklch(0.85_0.15_90)] to-[color:oklch(0.92_0.10_95)]",
     bullets: ["Rações premium", "Antiparasitários", "Petiscos naturais"],
+    cta: "Linha Pet'San",
+    href: "/produtos?categoria=Linha%20Pet",
   },
 ];
 
@@ -81,6 +90,17 @@ function MarcasPage() {
                   </li>
                 ))}
               </ul>
+              {m.href.includes("?") ? (
+                <a href={m.href} className="mt-7 inline-flex items-center gap-2 rounded-full bg-gradient-forest text-white px-6 py-3 text-sm font-semibold shadow-soft hover:shadow-elegant transition-all">
+                  {m.cta}
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              ) : (
+                <Link to={m.href} className="mt-7 inline-flex items-center gap-2 rounded-full bg-gradient-forest text-white px-6 py-3 text-sm font-semibold shadow-soft hover:shadow-elegant transition-all">
+                  {m.cta}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              )}
             </div>
           </article>
         ))}
