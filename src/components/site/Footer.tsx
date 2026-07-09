@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { COMPANY, whatsappUrl } from "@/lib/company";
 import { MapPin, Mail, Instagram } from "lucide-react";
-import agrosanLogo from "@/assets/logo-agrosan.png.asset.json";
 
 export function Footer() {
   return (
@@ -10,7 +9,12 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-3 mb-5">
             <div className="rounded-2xl bg-white p-3 border border-white/15 shadow-soft">
-              <img src={agrosanLogo.url} alt="Logo Agro'San Linea" className="h-12 w-auto max-w-[150px] object-contain" loading="lazy" />
+              <img
+                src="/images/logo-agrosan.png"
+                alt="Logo Agro'San Linea"
+                className="h-12 w-auto max-w-[150px] object-contain"
+                loading="lazy"
+              />
             </div>
           </div>
           <p className="text-sm text-white/70 max-w-xs">
@@ -21,7 +25,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">Links rápidos</h4>
+          <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">
+            Links rápidos
+          </h4>
           <ul className="space-y-2 text-sm">
             {[
               ["/empresa", "Empresa"],
@@ -32,7 +38,10 @@ export function Footer() {
               ["/contato", "Contato"],
             ].map(([to, label]) => (
               <li key={to}>
-                <Link to={to} className="text-white/70 hover:text-[color:var(--gold-soft)] transition-colors">
+                <Link
+                  to={to}
+                  className="text-white/70 hover:text-[color:var(--gold-soft)] transition-colors"
+                >
                   {label}
                 </Link>
               </li>
@@ -41,7 +50,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">Contato</h4>
+          <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">
+            Contato
+          </h4>
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-3">
               <MapPin className="w-4 h-4 mt-0.5 text-[color:var(--gold-soft)]" />
@@ -49,11 +60,18 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-3">
               <Mail className="w-4 h-4 mt-0.5 text-[color:var(--gold-soft)]" />
-              <a href={`mailto:${COMPANY.email}`} className="text-white/70 hover:text-white">{COMPANY.email}</a>
+              <a href={`mailto:${COMPANY.email}`} className="text-white/70 hover:text-white">
+                {COMPANY.email}
+              </a>
             </li>
             <li className="flex items-start gap-3">
               <Instagram className="w-4 h-4 mt-0.5 text-[color:var(--gold-soft)]" />
-              <a href={COMPANY.instagram} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white">
+              <a
+                href={COMPANY.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white"
+              >
                 {COMPANY.instagramHandle}
               </a>
             </li>
@@ -61,8 +79,12 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">Atendimento</h4>
-          <p className="text-sm text-white/70 mb-4">Solicite orçamento ou fale com um especialista.</p>
+          <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">
+            Atendimento
+          </h4>
+          <p className="text-sm text-white/70 mb-4">
+            Solicite orçamento ou fale com um especialista.
+          </p>
           <a
             href={whatsappUrl("Olá! Vim pelo site da Agro'San.")}
             target="_blank"
@@ -79,7 +101,12 @@ export function Footer() {
           <p>© {new Date().getFullYear()} Agro'San Linea. Todos os direitos reservados.</p>
           <p className="text-center">
             Desenvolvido por{" "}
-            <a href={COMPANY.developerUrl} target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-[color:var(--gold-soft)] font-semibold">
+            <a
+              href={COMPANY.developerUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/80 hover:text-[color:var(--gold-soft)] font-semibold"
+            >
               {COMPANY.developerName}
             </a>
           </p>

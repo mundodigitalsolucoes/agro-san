@@ -1,12 +1,25 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "./empresa";
-import { Sprout, Package, Wrench, Cpu, Newspaper, Users, ShoppingBag, ArrowRight } from "lucide-react";
+import {
+  Sprout,
+  Package,
+  Wrench,
+  Cpu,
+  Newspaper,
+  Users,
+  ShoppingBag,
+  ArrowRight,
+} from "lucide-react";
 
 export const Route = createFileRoute("/nossa-historia")({
   head: () => ({
     meta: [
       { title: "Nossa História — Agro'San Linea" },
-      { name: "description", content: "Conheça a história completa da Agro'San Linea: origem, propósito e o projeto que reúne cinco pilares para transformar o agro nacional." },
+      {
+        name: "description",
+        content:
+          "Conheça a história completa da Agro'San Linea: origem, propósito e o projeto que reúne cinco pilares para transformar o agro nacional.",
+      },
       { property: "og:title", content: "Nossa História — Agro'San Linea" },
       { property: "og:description", content: "O projeto Agro'San Linea contado por inteiro." },
       { property: "og:type", content: "article" },
@@ -36,7 +49,9 @@ function HistoriaPage() {
             <div className="w-12 h-12 rounded-xl bg-gradient-leaf text-white grid place-items-center shadow-soft">
               <Sprout className="w-6 h-6" />
             </div>
-            <div className="text-xs uppercase tracking-[0.2em] font-semibold text-[color:var(--gold)]">Origem do projeto</div>
+            <div className="text-xs uppercase tracking-[0.2em] font-semibold text-[color:var(--gold)]">
+              Origem do projeto
+            </div>
           </div>
 
           <p>
@@ -65,12 +80,17 @@ function HistoriaPage() {
           {/* Lista dos 5 itens - destaque visual sem alterar palavras */}
           <div className="not-prose grid grid-cols-2 sm:grid-cols-5 gap-3 py-6">
             {PILARES.map((p, i) => (
-              <div key={p.title} className="rounded-2xl bg-white border border-[color:var(--border)] p-4 shadow-soft text-center">
+              <div
+                key={p.title}
+                className="rounded-2xl bg-white border border-[color:var(--border)] p-4 shadow-soft text-center"
+              >
                 <div className="w-10 h-10 rounded-xl bg-gradient-forest text-white mx-auto grid place-items-center mb-2">
                   <p.icon className="w-5 h-5" />
                 </div>
                 <div className="text-xs text-[color:var(--gold)] font-semibold">{i + 1}</div>
-                <div className="font-display font-bold text-[color:var(--forest-deep)] text-sm mt-1">{p.title.toLowerCase()}</div>
+                <div className="font-display font-bold text-[color:var(--forest-deep)] text-sm mt-1">
+                  {p.title.toLowerCase()}
+                </div>
               </div>
             ))}
           </div>
