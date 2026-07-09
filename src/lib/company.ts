@@ -2,14 +2,16 @@ export const COMPANY = {
   name: "Agro'San Linea",
   shortName: "Agro'San",
   since: 2012,
-  cnpj: "00.000.000/0001-00",
-  whatsapp: "5591000000000", // internacional sem +
-  whatsappDisplay: "(91) 00000-0000",
+  cnpj: "12.010.616/0001-22",
+  whatsapp: "559184633934", // internacional sem +
+  whatsappDisplay: "(91) 8463-3934",
   instagram: "https://instagram.com/agrosanlinea",
   instagramHandle: "@agrosanlinea",
-  address: "Belém — Pará, Brasil",
+  address: "Pará, Brasil",
   email: "contato@agrosanlinea.com.br",
   slogan: "Se tem Agro'San, tem mais negócio.",
+  developerName: "Mundo Digital Soluções",
+  developerUrl: "https://mundodigitalsolucoes.com.br",
 };
 
 export function whatsappUrl(message?: string) {
