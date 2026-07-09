@@ -72,16 +72,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Desde 2012, a Agro'San Linea oferece produtos, tecnologia e atendimento especializado para fortalecer o produtor rural. Nutrição animal, veterinária, suplementos e agronegócio." },
       { name: "author", content: "Agro'San Linea" },
       { name: "theme-color", content: "#1f3a2e" },
+      { name: "google", content: "notranslate" },
+      { httpEquiv: "Content-Language", content: "pt-BR" } as any,
       { property: "og:site_name", content: "Agro'San Linea" },
       { property: "og:title", content: "Agro'San Linea — Tecnologia e Soluções para o Agronegócio" },
       { property: "og:description", content: "Produtos, tecnologia, informação e atendimento especializado para o produtor rural desde 2012." },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
+      { property: "og:image", content: "/images/logo-agrosan.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/images/logo-agrosan.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/images/logo-agrosan.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/images/logo-agrosan.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" },
@@ -97,6 +102,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           foundingDate: "2012",
           areaServed: "BR",
           address: { "@type": "PostalAddress", addressRegion: "PA", addressCountry: "BR" },
+          logo: "/images/logo-agrosan.png",
         }),
       },
     ],
@@ -109,11 +115,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" translate="no" className="notranslate">
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body translate="no" className="notranslate">
         {children}
         <Scripts />
       </body>
