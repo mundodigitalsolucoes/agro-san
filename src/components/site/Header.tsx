@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { COMPANY, whatsappUrl } from "@/lib/company";
+import agrosanLogo from "@/assets/logo-agrosan.png.asset.json";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -13,31 +14,20 @@ const NAV = [
 ] as const;
 
 export function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass shadow-soft" : "bg-transparent"
-      }`}
-    >
+    <header className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-[color:var(--border)] shadow-soft">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-18 py-3">
         <Link to="/" className="flex items-center gap-3 group" aria-label="Agro'San Linea — início">
-          <div className="w-11 h-11 rounded-xl bg-gradient-forest grid place-items-center shadow-elegant transition-transform group-hover:scale-105">
-            <svg viewBox="0 0 24 24" className="w-6 h-6 text-[color:var(--gold-soft)]" fill="currentColor" aria-hidden>
-              <path d="M12 2C7 6 5 10 5 14a7 7 0 0 0 14 0c0-4-2-8-7-12Zm0 18a5 5 0 0 1-5-5c0-2.7 1.4-5.5 5-8.6 3.6 3.1 5 5.9 5 8.6a5 5 0 0 1-5 5Z"/>
-            </svg>
-          </div>
-          <div className="leading-tight">
-            <div className="font-display font-bold text-[color:var(--forest-deep)] text-lg tracking-tight">Agro'San</div>
+          <img
+            src={agrosanLogo.url}
+            alt="Logo Agro'San Linea"
+            className="h-12 w-auto max-w-[160px] object-contain transition-transform group-hover:scale-105"
+            loading="eager"
+          />
+          <div className="hidden sm:block leading-tight">
+            <div className="font-display font-bold text-[color:var(--forest-deep)] text-base tracking-tight">{COMPANY.shortName}</div>
             <div className="text-[10px] uppercase tracking-[0.2em] text-[color:var(--muted-foreground)]">linea · desde {COMPANY.since}</div>
           </div>
         </Link>
@@ -58,7 +48,7 @@ export function Header() {
 
         <div className="hidden lg:flex">
           <a
-            href={whatsappUrl("Olá! Vim pelo site e gostaria de mais informações.")}
+            href={whatsappUrl("Olá! Vim pelo site da Agro'San e gostaria de mais informações.")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-gradient-forest text-white px-5 py-2.5 text-sm font-semibold shadow-elegant hover:opacity-95 transition"
@@ -79,7 +69,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="lg:hidden glass border-t border-[color:var(--border)]">
+        <div className="lg:hidden bg-white border-t border-[color:var(--border)] shadow-soft">
           <nav className="px-6 py-4 flex flex-col gap-1" aria-label="Menu mobile">
             {NAV.map((item) => (
               <Link
@@ -94,7 +84,7 @@ export function Header() {
               </Link>
             ))}
             <a
-              href={whatsappUrl("Olá! Vim pelo site.")}
+              href={whatsappUrl("Olá! Vim pelo site da Agro'San.")}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-forest text-white px-5 py-3 text-sm font-semibold"
