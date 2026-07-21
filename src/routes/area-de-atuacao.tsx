@@ -5,13 +5,13 @@ import { MapPin } from "lucide-react";
 export const Route = createFileRoute("/area-de-atuacao")({
   head: () => ({
     meta: [
-      { title: "Área de Atuação — Agro'San Linea no Pará e Brasil" },
+      { title: "Área de Atuação — Agro'san Linea no Pará e Brasil" },
       {
         name: "description",
         content:
           "Atendemos o Pará, com destaque para as regiões Metropolitana, Bragantina e Salgado, e estamos preparados para expansão em todo o território nacional.",
       },
-      { property: "og:title", content: "Área de Atuação — Agro'San Linea" },
+      { property: "og:title", content: "Área de Atuação — Agro'san Linea" },
       { property: "og:description", content: "Do Pará para todo o Brasil." },
       { property: "og:url", content: "/area-de-atuacao" },
     ],

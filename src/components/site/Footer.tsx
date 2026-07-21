@@ -11,7 +11,7 @@ export function Footer() {
             <div className="rounded-2xl bg-white p-3 border border-white/15 shadow-soft">
               <img
                 src="/images/logo-agrosan.png"
-                alt="Logo Agro'San Linea"
+                alt="Logo Agro'san Linea"
                 className="h-12 w-auto max-w-[150px] object-contain"
                 loading="lazy"
               />
@@ -86,7 +86,7 @@ export function Footer() {
             Solicite orçamento ou fale com um especialista.
           </p>
           <a
-            href={whatsappUrl("Olá! Vim pelo site da Agro'San.")}
+            href={whatsappUrl("Olá! Vim pelo site da Agro'san.")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-[color:var(--whatsapp)] text-white px-5 py-3 text-sm font-semibold shadow-elegant hover:brightness-110 transition"
@@ -98,7 +98,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/50">
-          <p>© {new Date().getFullYear()} Agro'San Linea. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Agro'san Linea. Todos os direitos reservados.</p>
           <p className="text-center">
             Desenvolvido por{" "}
             <a

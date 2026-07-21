@@ -14,14 +14,14 @@ import {
 export const Route = createFileRoute("/nossa-historia")({
   head: () => ({
     meta: [
-      { title: "Nossa História — Agro'San Linea" },
+      { title: "Nossa História — Agro'san Linea" },
       {
         name: "description",
         content:
-          "Conheça a história completa da Agro'San Linea: origem, propósito e o projeto que reúne cinco pilares para transformar o agro nacional.",
+          "Conheça a história completa da Agro'san Linea: origem, propósito e o projeto que reúne cinco pilares para transformar o agro nacional.",
       },
-      { property: "og:title", content: "Nossa História — Agro'San Linea" },
-      { property: "og:description", content: "O projeto Agro'San Linea contado por inteiro." },
+      { property: "og:title", content: "Nossa História — Agro'san Linea" },
+      { property: "og:description", content: "O projeto Agro'san Linea contado por inteiro." },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/nossa-historia" },
     ],

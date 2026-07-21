@@ -23,13 +23,13 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Agro'San Linea — Soluções para o Agronegócio" },
+      { title: "Agro'san Linea — Soluções para o Agronegócio" },
       {
         name: "description",
         content:
-          "Agro'San Linea: produtos, serviços, tecnologia, informação e atendimento para o agro. Nutri'San, Pet'San e Shop'San em um ecossistema para o produtor.",
+          "Agro'san Linea: produtos, serviços, tecnologia, informação e atendimento para o agro. Nutri'San, Pet'San e Shop'San em um ecossistema para o produtor.",
       },
-      { property: "og:title", content: "Agro'San Linea — Se tem Agro'San, tem mais negócio" },
+      { property: "og:title", content: "Agro'san Linea — Se tem Agro'san, tem mais negócio" },
       {
         property: "og:description",
         content: "Catálogo, atendimento e soluções para o agronegócio desde 2012.",
@@ -112,7 +112,7 @@ const LINHAS = [
 
 const MARCAS = [
   {
-    name: "AGRO'SAN",
+    name: "Agro'san",
     tag: "Marca institucional",
     desc: "Identidade que reúne a estrutura de soluções para o agronegócio.",
     logo: "/images/logo-agrosan.png",
@@ -222,7 +222,7 @@ function HomePage() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href={whatsappUrl("Olá! Vim pelo site da Agro'San e quero solicitar atendimento.")}
+                href={whatsappUrl("Olá! Vim pelo site da Agro'san e quero solicitar atendimento.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[color:var(--whatsapp)] text-white px-6 py-3.5 font-semibold shadow-elegant hover:brightness-110 transition"
@@ -230,6 +230,9 @@ function HomePage() {
                 Falar no WhatsApp
               </a>
             </div>
+            <p className="mt-5 text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] text-white/85">
+              CAMPO - REBANHO - PET
+            </p>
 
             <dl className="mt-14 grid grid-cols-3 gap-6 max-w-lg">
               {[
@@ -254,13 +257,13 @@ function HomePage() {
             Uma linha completa para quem cuida do que a terra oferece.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            A Agro'San Linea nasceu para facilitar a negociação no agro nacional, reunindo empresas
+            A Agro'san Linea nasceu para facilitar a negociação no agro nacional, reunindo empresas
             parceiras cuidadosamente selecionadas em torno de cinco pilares que fortalecem o
             produtor rural em cada etapa da cadeia.
           </p>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
             A história institucional foi preservada em uma página própria, mantendo o texto original
-            da criação da Agro'San.
+            da criação da Agro'san.
           </p>
           <Link
             to="/nossa-historia"
@@ -296,7 +299,7 @@ function HomePage() {
             <div className="max-w-2xl">
               <Eyebrow>Linhas de produtos</Eyebrow>
               <h2 className="mt-4 text-3xl lg:text-4xl font-display font-bold text-[color:var(--forest-deep)]">
-                O que a Agro'San vende e atende
+                O que a Agro'san vende e atende
               </h2>
               <p className="mt-4 text-muted-foreground">
                 Categorias organizadas para o cliente encontrar rápido a linha certa e chamar no
@@ -343,7 +346,7 @@ function HomePage() {
           <div className="text-center max-w-2xl mx-auto">
             <Eyebrow>Estrutura</Eyebrow>
             <h2 className="mt-4 text-3xl lg:text-4xl font-display font-bold text-[color:var(--forest-deep)]">
-              Os cinco pilares da Agro'San
+              Os cinco pilares da Agro'san
             </h2>
             <p className="mt-4 text-muted-foreground">
               Uma metodologia própria que integra tudo o que o produtor rural precisa para
@@ -467,7 +470,7 @@ function HomePage() {
 
       <section className="mx-auto max-w-7xl px-6 lg:px-10 py-24">
         <div className="text-center max-w-2xl mx-auto">
-          <Eyebrow>Por que Agro'San</Eyebrow>
+          <Eyebrow>Por que Agro'san</Eyebrow>
           <h2 className="mt-4 text-3xl lg:text-4xl font-display font-bold text-[color:var(--forest-deep)]">
             Diferenciais que fazem a diferença no campo
           </h2>
@@ -504,13 +507,13 @@ function HomePage() {
                   Precisa de soluções para o Agronegócio?
                 </h2>
                 <p className="mt-4 text-white/80 max-w-xl">
-                  Fale com a Shop'San, canal oficial de atendimento e vendas da Agro'San.
+                  Fale com a Shop'San, canal oficial de atendimento e vendas da Agro'san.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 lg:justify-end">
                 <a
                   href={whatsappUrl(
-                    "Olá! Vim pelo site da Agro'San e quero solicitar atendimento pela Shop'San.",
+                    "Olá! Vim pelo site da Agro'san e quero solicitar atendimento pela Shop'San.",
                   )}
                   target="_blank"
                   rel="noopener noreferrer"

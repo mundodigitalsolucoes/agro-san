@@ -8,13 +8,13 @@ import { PageHero } from "./empresa";
 export const Route = createFileRoute("/produtos")({
   head: () => ({
     meta: [
-      { title: "Produtos — Catálogo Agro'San Linea" },
+      { title: "Produtos — Catálogo Agro'san Linea" },
       {
         name: "description",
         content:
           "Catálogo com mais de 150 produtos para nutrição animal, veterinária, suplementos, equinos, pet e agronegócio. Solicite orçamento pelo WhatsApp.",
       },
-      { property: "og:title", content: "Catálogo de produtos — Agro'San Linea" },
+      { property: "og:title", content: "Catálogo de produtos — Agro'san Linea" },
       {
         property: "og:description",
         content: "Nutrição animal, veterinária, suplementos, equinos, pet e agronegócio.",
