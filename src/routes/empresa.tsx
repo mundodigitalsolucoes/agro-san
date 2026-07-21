@@ -4,14 +4,14 @@ import { Package, Wrench, Cpu, Newspaper, Users, ArrowRight } from "lucide-react
 export const Route = createFileRoute("/empresa")({
   head: () => ({
     meta: [
-      { title: "Empresa — Agro'San Linea" },
+      { title: "Empresa — Agro'san Linea" },
       {
         name: "description",
         content:
-          "Conheça a Agro'San Linea: quem somos, missão, valores e os cinco pilares que sustentam nossa atuação no agronegócio nacional desde 2012.",
+          "Conheça a Agro'san Linea: quem somos, missão, valores e os cinco pilares que sustentam nossa atuação no agronegócio nacional desde 2012.",
       },
-      { property: "og:title", content: "Empresa — Agro'San Linea" },
-      { property: "og:description", content: "Missão, visão e pilares da Agro'San Linea." },
+      { property: "og:title", content: "Empresa — Agro'san Linea" },
+      { property: "og:description", content: "Missão, visão e pilares da Agro'san Linea." },
       { property: "og:url", content: "/empresa" },
     ],
     links: [{ rel: "canonical", href: "/empresa" }],
@@ -32,7 +32,7 @@ function EmpresaPage() {
     <>
       <PageHero
         eyebrow="Empresa"
-        title="A Agro'San Linea é a linha que conecta o produtor ao futuro do agro."
+        title="A Agro'san Linea é a linha que conecta o produtor ao futuro do agro."
         subtitle="Uma empresa fundada em 2012 no Pará, dedicada a oferecer produtos, serviços, tecnologia, informação e associação para fortalecer o produtor rural em todo o Brasil."
       />
 

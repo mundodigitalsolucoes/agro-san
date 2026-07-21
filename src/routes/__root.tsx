@@ -73,21 +73,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Agro'San Linea — Tecnologia e Soluções para o Agronegócio" },
+      { title: "Agro'san Linea — Tecnologia e Soluções para o Agronegócio" },
       {
         name: "description",
         content:
-          "Desde 2012, a Agro'San Linea oferece produtos, tecnologia e atendimento especializado para fortalecer o produtor rural. Nutrição animal, veterinária, suplementos e agronegócio.",
+          "Desde 2012, a Agro'san Linea oferece produtos, tecnologia e atendimento especializado para fortalecer o produtor rural. Nutrição animal, veterinária, suplementos e agronegócio.",
       },
-      { name: "author", content: "Agro'San Linea" },
+      { name: "author", content: "Agro'san Linea" },
       { name: "theme-color", content: "#1f3a2e" },
       { name: "robots", content: "index, follow" },
       { name: "google", content: "notranslate" },
       { "http-equiv": "Content-Language", content: "pt-BR" },
-      { property: "og:site_name", content: "Agro'San Linea" },
+      { property: "og:site_name", content: "Agro'san Linea" },
       {
         property: "og:title",
-        content: "Agro'San Linea — Tecnologia e Soluções para o Agronegócio",
+        content: "Agro'san Linea — Tecnologia e Soluções para o Agronegócio",
       },
       {
         property: "og:description",
@@ -97,7 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:image", content: "/images/logo-agrosan.png" },
-      { property: "og:image:alt", content: "Logo oficial Agro'San Linea" },
+      { property: "og:image:alt", content: "Logo oficial Agro'san Linea" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "/images/logo-agrosan.png" },
     ],
@@ -120,8 +120,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Agro'San Linea",
-          slogan: "Se tem Agro'San, tem mais negócio.",
+          name: "Agro'san Linea",
+          slogan: "Se tem Agro'san, tem mais negócio.",
           foundingDate: "2012",
           url: "https://agrosanlinea.com.br",
           sameAs: ["https://instagram.com/agrosanlinea"],

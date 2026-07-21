@@ -6,13 +6,13 @@ import { MapPin, Mail, Instagram, Clock } from "lucide-react";
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato — Agro'San Linea" },
+      { title: "Contato — Agro'san Linea" },
       {
         name: "description",
         content:
-          "Fale com a Agro'San Linea pelo WhatsApp, e-mail ou Instagram. Atendimento consultivo e especializado para o produtor rural.",
+          "Fale com a Agro'san Linea pelo WhatsApp, e-mail ou Instagram. Atendimento consultivo e especializado para o produtor rural.",
       },
-      { property: "og:title", content: "Contato — Agro'San Linea" },
+      { property: "og:title", content: "Contato — Agro'san Linea" },
       { property: "og:description", content: "Fale com nossa equipe." },
       { property: "og:url", content: "/contato" },
     ],

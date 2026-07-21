@@ -5,13 +5,13 @@ import { PageHero } from "./empresa";
 export const Route = createFileRoute("/marcas")({
   head: () => ({
     meta: [
-      { title: "Marcas — Agro'San, Shop'San, Nutri'San e Pet'San" },
+      { title: "Marcas — Agro'san, Shop'San, Nutri'San e Pet'San" },
       {
         name: "description",
         content:
-          "Conheça as marcas do grupo Agro'San Linea: Agro'San (institucional), Shop'San (atendimento e vendas), Nutri'San (nutrição animal) e Pet'San (pet).",
+          "Conheça as marcas do grupo Agro'san Linea: Agro'san (institucional), Shop'San (atendimento e vendas), Nutri'San (nutrição animal) e Pet'San (pet).",
       },
-      { property: "og:title", content: "Marcas do grupo Agro'San Linea" },
+      { property: "og:title", content: "Marcas do grupo Agro'san Linea" },
       { property: "og:description", content: "Um ecossistema de marcas para o agro e o pet." },
       { property: "og:url", content: "/marcas" },
     ],
@@ -22,9 +22,9 @@ export const Route = createFileRoute("/marcas")({
 
 const MARCAS = [
   {
-    name: "AGRO'SAN",
+    name: "Agro'san",
     tag: "Marca institucional",
-    desc: "Identidade que reúne toda a estrutura de soluções da Agro'San Linea para o agronegócio.",
+    desc: "Identidade que reúne toda a estrutura de soluções da Agro'san Linea para o agronegócio.",
     logo: "/images/logo-agrosan.png",
     tint: "from-[color:var(--forest-deep)] to-[color:var(--forest)]",
     bullets: ["Curadoria de portfólio", "Atendimento consultivo", "Presença em todo o Pará"],
