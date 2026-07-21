@@ -1,6 +1,6 @@
 export const COMPANY = {
-  name: "Agro'San Linea",
-  shortName: "Agro'San",
+  name: "Agro'san Linea",
+  shortName: "Agro'san",
   since: 2012,
   cnpj: "12.010.616/0001-22",
   whatsapp: "559184633934", // internacional sem +
@@ -9,7 +9,7 @@ export const COMPANY = {
   instagramHandle: "@agrosanlinea",
   address: "Pará, Brasil",
   email: "contato@agrosanlinea.com.br",
-  slogan: "Se tem Agro'San, tem mais negócio.",
+  slogan: "Se tem Agro'san, tem mais negócio.",
   developerName: "Mundo Digital Soluções",
   developerUrl: "https://mundodigitalsolucoes.com.br",
 };
